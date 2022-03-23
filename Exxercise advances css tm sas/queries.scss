@@ -1,0 +1,88 @@
+
+@mixin boxLayout() {
+    box-sizing: content-box;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    overflow: hidden;
+  }
+  
+  @mixin gridLayout_mobile() {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat (1, 1fr);
+    grid-row: repeat (6, 100px);
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f";
+  }
+  
+  @mixin gridLayout_600px() {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat (2, 1fr);
+    grid-row: repeat (3, 100px);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
+  
+  @mixin gridLayout_800px() {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat (3, 1fr);
+    grid-row: repeat (2, 100px);
+    grid-template-areas:
+      "a b c"
+      "d e f";
+  }
+  
+  @mixin picSize() {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+
+
+// quieries //
+
+@media screen and (min-width: 600px) {
+  .main__porfolio {
+    @include gridLayout_600px();
+    .container:hover .__portfolioPic__overlay {
+      opacity: 0.5;
+    }
+
+    .container:hover .__portfolioPic {
+      opacity: 0.3;
+    }
+    
+
+    .container:hover .__link {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .main__porfolio {
+    @include gridLayout_800px();
+    .container:hover .__portfolioPic__overlay {
+      opacity: 0.5;
+    }
+
+    .container:hover .__portfolioPic {
+      opacity: 0.3;
+    }
+
+    .container:hover .__link {
+      opacity: 1;
+    }
+  }
+}

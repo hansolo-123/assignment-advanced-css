@@ -1,0 +1,121 @@
+$base-color: #c3cfe2;
+$secundary-color_1: #686de0;
+$secundary-color_2: #fff;
+$secundary-color_3: darkgray;
+$border-style: 2px solid lightgray;
+$box-shadow: 15px 10px lightgray;
+$primaryFont: font-family Arial, Helvetica, sans-serif;
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+
+nav.social {
+  position: sticky;
+  margin-left: 80%;
+  top: 40%;
+
+  z-index: 100;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: $secundary-color_2;
+  background-color: #e59500;
+  margin: 0 10px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+ul li [class|="fa-"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+ul li.blog {
+  background-color: #e17b77;
+}
+
+ul li.twitter {
+  background-color: #00aced;
+}
+
+ul li.linkedin {
+  background-color: #007bb6;
+}
+
+ul li.facebook {
+  background-color: #3b5998;
+}
+
+ul li.github {
+  background-color: #333;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: 51px;
+  width: 0px;
+  height: 50px;
+  background-color: #eebb5c;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 3px;
+  transition: all 0.5s 0.3s ease;
+}
+
+.slider p {
+  text-transform: uppercase;
+  color: $secundary-color_2;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  transition: all 0.5s 0.3s ease;
+}
+
+ul li.blog .slider {
+  background-color: #e17b77;
+}
+
+ul li.twitter .slider {
+  background-color: #00aced;
+}
+
+ul li.linkedin .slider {
+  background-color: #007bb6;
+}
+
+ul li.facebook .slider {
+  background-color: #3b5998;
+}
+
+ul li.github .slider {
+  background-color: #333;
+}
+
+ul li:hover .slider {
+  width: 180px;
+  transition: all 1s 0.2s;
+}
+
+ul li:hover .slider p {
+  opacity: 1;
+  transition: all 1s 0.2;
+}

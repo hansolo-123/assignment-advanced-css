@@ -1,0 +1,136 @@
+$base-color: #c3cfe2;
+$secundary-color_1: #686de0;
+$secundary-color_2: #fff;
+$secundary-color_3: darkgray;
+$border-style: 2px solid lightgray;
+$box-shadow: 15px 10px lightgray;
+$primaryFont: font-family Arial, Helvetica, sans-serif;
+
+@mixin boxLayout() {
+    box-sizing: content-box;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    overflow: hidden;
+  }
+  
+  @mixin gridLayout_mobile() {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat (1, 1fr);
+    grid-row: repeat (6, 100px);
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f";
+  }
+  
+  @mixin gridLayout_600px() {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat (2, 1fr);
+    grid-row: repeat (3, 100px);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
+  
+  @mixin gridLayout_800px() {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat (3, 1fr);
+    grid-row: repeat (2, 100px);
+    grid-template-areas:
+      "a b c"
+      "d e f";
+  }
+  
+  @mixin picSize() {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  .main__porfolio {
+    @include boxLayout();
+    @include gridLayout_mobile();
+    justify-content: center;
+  
+    :nth-child(1) {
+      grid-area: a;
+    }
+  
+    :nth-child(2) {
+      grid-area: b;
+    }
+    :nth-child(3) {
+      grid-area: c;
+    }
+    :nth-child(4) {
+      grid-area: d;
+    }
+    :nth-child(5) {
+      grid-area: e;
+    }
+    :nth-child(6) {
+      grid-area: f;
+    }
+  
+    .container:hover .__portfolioPic__overlay {
+      opacity: 0.5;
+    }
+  
+    .container:hover .__portfolioPic {
+      opacity: 0.3;
+    }
+  
+    .container:hover .__link {
+      opacity: 1;
+    }
+  
+    .container {
+      position: relative;
+  
+      .__portfolioPic {
+        @include picSize();
+      }
+    }
+  }
+  .__portfolioPic__overlay {
+    position: absolute;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 15px;
+    font-size: 14px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.8s ease;
+    background-color: black;
+  
+    .__link {
+      text-decoration: none;
+      color: white;
+      background-color: $secundary-color_2;
+      padding: 5px;
+      border-radius: 15px;
+      position: absolute;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transition: 0.8s ease;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+  

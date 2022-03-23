@@ -1,0 +1,25 @@
+$base-color: #c3cfe2;
+$secundary-color_1: #686de0;
+$secundary-color_2: #fff;
+$secundary-color_3: darkgray;
+$border-style: 2px solid lightgray;
+$box-shadow: 15px 10px lightgray;
+$primaryFont: font-family Arial, Helvetica, sans-serif;
+
+a .__link:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: black;
+  font-family: $primaryFont;
+}
+
+
+.main {
+    background-color: #c3cfe2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }

@@ -1,0 +1,42 @@
+@media screen and (min-width: 600px) {
+  .main__porfolio {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    -ms-grid-columns: repeat 2, 1fr;
+        grid-template-columns: repeat 2, 1fr;
+    grid-row: repeat 3, 100px;
+        grid-template-areas: "a b" "c d" "e f";
+  }
+  .main__porfolio .container:hover .__portfolioPic__overlay {
+    opacity: 0.5;
+  }
+  .main__porfolio .container:hover .__portfolioPic {
+    opacity: 0.3;
+  }
+  .main__porfolio .container:hover .__link {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .main__porfolio {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 15px;
+    -ms-grid-columns: repeat 3, 1fr;
+        grid-template-columns: repeat 3, 1fr;
+    grid-row: repeat 2, 100px;
+        grid-template-areas: "a b c" "d e f";
+  }
+  .main__porfolio .container:hover .__portfolioPic__overlay {
+    opacity: 0.5;
+  }
+  .main__porfolio .container:hover .__portfolioPic {
+    opacity: 0.3;
+  }
+  .main__porfolio .container:hover .__link {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=queries.css.map */

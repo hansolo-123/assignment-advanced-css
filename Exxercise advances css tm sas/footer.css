@@ -1,0 +1,218 @@
+.__portfolioPic > div {
+  position: relative;
+}
+
+.main__porfolio {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: repeat 1, 1fr;
+      grid-template-columns: repeat 1, 1fr;
+  grid-row: repeat 6, 100px;
+      grid-template-areas: "a" "b" "c" "d" "e" "f";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__porfolio :nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+.main__porfolio :nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: b;
+}
+
+.main__porfolio :nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: c;
+}
+
+.main__porfolio :nth-child(4) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: d;
+}
+
+.main__porfolio :nth-child(5) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: e;
+}
+
+.main__porfolio :nth-child(6) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: f;
+}
+
+.main__porfolio .container {
+  position: relative;
+}
+
+.main__porfolio .container .__portfolioPic {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.__portfolioPic__overlay {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  border-radius: 15px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  background-color: black;
+}
+
+.__portfolioPic__overlay .__link {
+  text-decoration: none;
+  color: white;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.footer {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  overflow: hidden;
+  border: 2px solid lightgray;
+  -webkit-box-shadow: 15px 10px lightgray;
+          box-shadow: 15px 10px lightgray;
+  border-radius: 15px 15px;
+}
+
+.footer__text-top {
+  width: auto;
+  height: 65%;
+  margin-top: 5px;
+  text-align: center;
+  padding: 12px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.footer__text-top h1,
+.footer__text-top h2,
+.footer__text-top h3 {
+  text-align: left;
+  padding: 10%;
+  margin-bottom: 10%;
+  word-spacing: 0, 2em;
+  line-height: 175%;
+  color: grey;
+  font-weight: 600;
+  font-family: font-family Arial, Helvetica, sans-serif;
+}
+
+.footer__profilePic {
+  position: absolute;
+  margin-left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 18%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 15px solid white;
+}
+
+.footer__text-bottom {
+  width: auto;
+  height: 35%;
+  text-align: center;
+  padding: 12px;
+  background-color: #686de0;
+}
+
+.footer__text-bottom h1,
+.footer__text-bottom h3 {
+  margin-top: 5%;
+  font-weight: 600;
+  font-family: font-family Arial, Helvetica, sans-serif;
+  color: #c3cfe2;
+}
+
+.footer__text-bottom h2 {
+  padding-top: 20%;
+  font-family: font-family Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .main__porfolio {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    -ms-grid-columns: repeat 2, 1fr;
+        grid-template-columns: repeat 2, 1fr;
+    grid-row: repeat 3, 100px;
+        grid-template-areas: "a b" "c d" "e f";
+  }
+  .main__porfolio .container:hover .__portfolioPic__overlay {
+    opacity: 0.5;
+  }
+  .main__porfolio .container:hover .__portfolioPic {
+    opacity: 0.3;
+  }
+  .main__porfolio .container:hover .__link {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .main__porfolio {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 15px;
+    -ms-grid-columns: repeat 3, 1fr;
+        grid-template-columns: repeat 3, 1fr;
+    grid-row: repeat 2, 100px;
+        grid-template-areas: "a b c" "d e f";
+  }
+  .main__porfolio .container:hover .__portfolioPic__overlay {
+    opacity: 0.5;
+  }
+  .main__porfolio .container:hover .__portfolioPic {
+    opacity: 0.3;
+  }
+  .main__porfolio .container:hover .__link {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
